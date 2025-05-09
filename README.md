@@ -3,6 +3,32 @@ For doubts and enquires please visit [Inovve Web Design](https://inovve.com/)
 # wordpress-tools-and-scripts
 WooCommerce Tools and Scripts
 
+📝 update-slugs.php
+This WordPress snippet ensures that the slug (post_name) of any post, page, or custom post type is automatically updated to match the title whenever the title is changed.
+
+By default, WordPress does not update the slug after the initial post creation, even if the title changes. This behavior is ideal for preserving permalinks, but can be undesirable if you want the URL to always reflect the current title.
+
+This code hook fixes that by detecting changes to the title and forcing an update to the slug on save.
+
+⚙️ Behavior
+Applies to all public post types (post, page, and any custom post types with 'public' => true).
+
+Updates the post_name (slug) to a sanitized version of the new title only if the title has changed.
+
+Skips autosaves, revisions, and avoids infinite loops by temporarily unhooking itself.
+
+Can be safely added to your theme’s functions.php or a custom plugin.
+
+⚠️ Important Notes
+SEO Warning: Changing slugs can break existing links. If this matters for your site, you should consider implementing a redirect system to forward old URLs to the new ones.
+
+If you're using a plugin or theme that depends on fixed slugs, test carefully.
+
+📦 Example Use Cases
+Dynamic content where titles are frequently edited and you want URLs to match automatically.
+
+Custom post types like projects, events, or documentation where SEO-friendly, title-based URLs are important.
+
 # reset-slugs.php WooCommerce Product Slug Regenerator Script
 
 This script is a simple, direct method to regenerate the URL slugs for all published WooCommerce products based on their current product names. It is designed for use cases where product slugs have become inconsistent or need to be uniformly reset.
