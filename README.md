@@ -54,3 +54,34 @@ This script is a simple, direct method to regenerate the URL slugs for all publi
 1.  **Backup Your Website:** **Crucially, create a complete backup of your WordPress database and files.** This script modifies product data, and a backup is essential for recovery if any issues occur.
 2.  **Create the Script File:** Create a new file named `regenerate_product_slugs.php` in the root directory of your WordPress installation (the same directory as `wp-config.php` and `wp-load.php`).
 3.  **Copy and Paste the Code:** Copy the provided PHP code (shown below) and paste it into the `regenerate_product_slugs.php` file.
+
+# 🛒 WooCommerce Dynamic m² Calculator for Products with Dimensions
+This simple WordPress + WooCommerce snippet displays the total square meters (m²) a customer is purchasing based on the selected quantity of a product, using the built-in Length and Width product fields.
+
+✅ Features
+Automatically calculates and displays square meters when a user selects quantity.
+
+Works only for products that have both Length and Width defined.
+
+Converts values from centimeters to meters (adjustable).
+
+Real-time update when quantity is changed, including with + and - buttons (Woodmart theme compatible).
+
+Places the result below the "Add to Cart" button for better visibility.
+
+💡 Example Output
+Está a comprar 3 unidade(s) = 0.72 m²
+
+📦 Requirements
+WordPress + WooCommerce
+
+Product dimensions (length and width) set in cm
+
+Theme: Compatible with most, including Woodmart
+
+🧩 How to Use
+Add the provided PHP code to your theme’s functions.php file or a custom plugin.
+
+Set the Length and Width values for each product in the product edit screen under "Shipping".
+
+The dynamic m² message will appear automatically on the product page when quantity is changed.
